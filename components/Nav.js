@@ -1,17 +1,16 @@
 import Link from 'next/link'
 import {Poppins} from 'next/font/google'
-import styles from '../styles/Nav.module.css'
+import navStyles from '../styles/Nav.module.css'
 
 const poppins = Poppins({
   weight: ['400','700'],
   subsets:['latin']
 })
 
-export const Nav = () => {
+const Nav = () => {
   return (
     <div>
-        <h1>Github Search</h1>
-        <nav className={styles.navStyles}>
+        <nav className={navStyles.nav}>
             <ul className={poppins.className}>
                 <li>
                     <Link href="/">Home</Link>
@@ -27,3 +26,4 @@ export const Nav = () => {
     </div>
   )
 }
+export default Nav
